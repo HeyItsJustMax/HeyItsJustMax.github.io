@@ -4,6 +4,8 @@
 
 // CONSTANTS - use $ to indicate you are using jquery
 
+
+
 const $name = $("#name")
 const $id = $("#index")
 const $types = $("#types")
@@ -17,8 +19,17 @@ const $specialAttack = $("#spclatk")
 const $specialDefense = $("#spcldfs")
 const $speed = $("#speed")
 const $moves = $("#moves")
+const $input = $('input[type="text"]')
+
+// Event Listeners
+
+$('form').on('submit', handleGetData)
 
 // Pokemon Name 1 - 151 (Bulbasaur - Mew)
+
+function handleGetData(event) {
+  event.preventDefault()
+
 $.ajax({
     url:'https://pokeapi.co/api/v2/pokemon?limit=151/'
   }).then(
@@ -30,3 +41,4 @@ $.ajax({
     }
   );
 
+}
