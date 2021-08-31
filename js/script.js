@@ -10,6 +10,7 @@ const BASE_URL = "https://pokeapi.co/api/v2/pokemon/"
 const $name = $("#name")
 const $id = $("#index")
 const $types = $("#types")
+const $effectiveness = $("#effectiveness")
 const $height = $("#height")
 const $weight = $("#weight")
 const $stats = $("#stats")
