@@ -4,7 +4,7 @@
 
 // CONSTANTS - use $ to indicate you are using jquery
 
-
+const BASE_URL = "https://pokeapi.co/api/v2/pokemon/"
 
 const $name = $("#name")
 const $id = $("#index")
@@ -30,15 +30,29 @@ $('form').on('submit', handleGetData)
 function handleGetData(event) {
   event.preventDefault()
 
-$.ajax({
-    url:'https://pokeapi.co/api/v2/pokemon?limit=151/'
-  }).then(
-    function(data){
-     console.log(data);
-    },
-    function(error){
-     console.log('bad request', error);
-    }
-  );
+  $.ajax(BASE_URL + $input.val())
+  .then(function(data) {
+      console.log(data)
+      render(data)
+    }, function(error) {
+      console.log('bad request', error)
+    })
+}
+
+function render(pokeData) {
+
+    $name.text(pokeData.name)
+    $id.text()
+    $types.text()
+    $height.text()
+    $weight.text()
+    $stats.text()
+    $healthPoints.text()
+    $attack.text()
+    $specialAttack.text()
+    $specialDefense.text()
+    $speed.text()
+    $moves.text()
+    
 
 }
