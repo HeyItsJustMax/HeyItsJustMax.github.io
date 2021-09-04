@@ -41,7 +41,7 @@ $('form').on('submit', swapDisplay) //displays the stats/pictures of the pokemon
 function handleGetData(event) {
   event.preventDefault()
 
-  $.ajax(BASE_URL + $input.val())
+  $.ajax(BASE_URL + $input.val().toLowerCase())
   .then(function(data) {
       console.log(data)
       render(data)
