@@ -33,7 +33,7 @@ const pokeTypes = ["normal", "fighting", "flying", "poison", "ground", "rock", "
 
 $('form').on('submit', handleGetData) //collects API data after submitting
 
-$('form').on('submit', swapDisplay) //displays the stats/picture of the pokemon
+$('form').on('submit', swapDisplay) //displays the stats/pictures of the pokemon
 
 
 // FUNCTIONS
@@ -55,12 +55,6 @@ function render(pokeData) {
 
     $name.text(pokeData.name)
     $id.text(pokeData.id)
-
-    // if(pokeData.types.length > 1) {
-    //   $types.text(pokeData.types[0].type.name + ", " + pokeData.types[1].type.name)
-    // } else {
-    //   $types.text(pokeData.types[0].type.name)
-    // }
     $types.text(pokeData.types.reduce(function(acc, item, index){
       if(index === 0){
         return acc + item.type.name
@@ -68,26 +62,19 @@ function render(pokeData) {
         return acc + ", " + item.type.name
       }
     },""))
-
     $height.text(pokeData.height)
     $weight.text(pokeData.weight)
-
     $healthPoints.text(pokeData.stats[0].base_stat)
     $attack.text(pokeData.stats[1].base_stat)
     $defense.text(pokeData.stats[2].base_stat)
     $specialAttack.text(pokeData.stats[3].base_stat)
     $specialDefense.text(pokeData.stats[4].base_stat)
     $speed.text(pokeData.stats[5].base_stat)
-
     $spritesFront.attr("src", pokeData.sprites.front_default)
     $spritesShiny.attr("src", pokeData.sprites.front_shiny)
 }
 
 function swapDisplay() {
-  //let sq2/3.display === false?
   let displayTwo = document.querySelector(".squaretwo")
-  let displayThree = document.querySelector(".squarethree")
-  displayTwo.style.display = 'inline'
-  displayThree.style.display = 'inline'
-
+  displayTwo.style.display = 'block'
 }

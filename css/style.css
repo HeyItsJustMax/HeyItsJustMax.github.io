@@ -1,33 +1,32 @@
 body {
-    background-color: aqua;
+    background-color: rgb(255, 0, 0);
 }
 
 .container {
-
-    text-align: center;
+   display: flex;
 }
 
 .squareone {
     display: block;
-    background-color: red;
+    text-align: center;
     height: 400px;
-    /* display: none; */
+    width: auto;
 }
 
 .squaretwo {
-    background-color: black;
-    display: flex;
-    text-align: left;   
     color: white;
+    align-items: center;
+    margin: auto;
     display: none;
+    animation: backInUp;
+    animation-duration: 5s
 }
 
-.squarethree {
-    background-color: white;
-    display: flex;
-    height: 400px;
-    width: 20;
-    align-items: center;
-    justify-content: center;
-    display: none;
+.list {
+    list-style-type: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }

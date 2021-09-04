@@ -7,35 +7,40 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script defer src="./js/script.js"></script>
     <link rel="stylesheet" href="./css/style.css"></link>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
     <title>Pokedex</title>
     <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAADTrd4AAAAAAM+GOAC0ir8A////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAzEREREREAEzEAAxEREREREAAAADMRERAAAAASMzERASAAABFBMxEBEAAAQUEAEBJAAAASQQAQFBAAABRBABAUEAAwARAAEAEAAAMAAAARAAAAAAAAABEAAAAAAAABERAAAAAAABARAAAAAAAAABEAAQAAABAAEREREREREREAHwAAAAMAACABAADAAAAAgAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAIAAAACAAAAAgAAAAIAAAADECAAA" rel="icon" type="image/x-icon" />
+
 </head>
 
 <body>    
     <main>
         
+        <div class="squareone">
+            <p></p>
+            
+            <img id="logo" src="https://freepikpsd.com/media/2020/01/pokemon-go-logo-hd-image-PNG.png" alt="logo">
+            
+            <h1>Kanto Pokedex</h1>
+            
+            <form>
+                <input type="text" placeholder="Input Pokemon Name">
+                <input type="submit" value="Submit">
+            </form> 
+            <p></p>
+        </div>
         <div class="container">
-            <div class="squareone">
-                <p></p>
-
-                <img id="logo" src="https://freepikpsd.com/media/2020/01/pokemon-go-logo-hd-image-PNG.png" alt="logo">
-                
-                <h1>Kanto Pokedex</h1>
-                
-                <form>
-                    <input type="text" placeholder="Input Pokemon Name">
-                    <input type="submit" value="Submit">
-                </form> 
-                <p></p>
-            </div>
             <div class="squaretwo"> 
-                <ul>
-                    <p>Name : <span id="name"></span></p>
-                    <p>Index # : <span id="index"></span></p>
-                    <p>Type(s) : <span id="types"></span></p>
-                    <p>Height : <span id="height"></span></p>
-                    <p>Weight : <span id="weight"></span></p>
-                    <p>Base Stats ...  <span id="stats"></span></p>
+                <ul class="list">
+                    <li>Name : <span id="name"></span></li>
+                    <li>Index # : <span id="index"></span></li>
+                    <li>Type(s) : <span id="types"></span></li>
+                    <li>Height : <span id="height"></span></li>
+                    <li>Weight : <span id="weight"></span></li>
+                    <!-- <p>Base Battle Stats ...  <span id="stats"></span></p> -->
                     <li>Health Points : <span id="hp"></span></li>
                     <li>Defense : <span id="defense"></span></li>
                     <li>Attack : <span id="attack"></span></li>
@@ -43,11 +48,11 @@
                     <li>Special Defense : <span id="spcldfs"></span></li>
                     <li>Speed : <span id="speed"></span></li>
                 </ul>
-            </div>
-            <div class="squarethree">
-                <h1>POKE PIC HERE</h1>
                 <img src="" id="spritesfront"></img>
                 <img src="" id="spritesshiny"></img>
+            </div>
+            <div class="squarethree">
+                <!-- <h1>POKE PIC HERE</h1> -->
             </div>
         </div>
     </main>
