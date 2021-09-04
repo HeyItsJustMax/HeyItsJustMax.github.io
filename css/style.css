@@ -30,3 +30,10 @@ img {
     max-width: 100%;
     height: auto;
 }
+
+@media screen and (min-width: 480px) {
+}
+
+
+@media screen and (min-width: 769px) {
+}
