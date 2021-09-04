@@ -31,7 +31,10 @@ const pokeTypes = ["normal", "fighting", "flying", "poison", "ground", "rock", "
 
 // Event Listeners
 
-$('form').on('submit', handleGetData)
+$('form').on('submit', handleGetData) //collects API data after submitting
+
+$('form').on('submit', swapDisplay) //displays the stats/picture of the pokemon
+
 
 // FUNCTIONS
 
@@ -78,7 +81,13 @@ function render(pokeData) {
 
     $spritesFront.attr("src", pokeData.sprites.front_default)
     $spritesShiny.attr("src", pokeData.sprites.front_shiny)
-  
-   //trying to get img src="" to equal 
 }
 
+function swapDisplay() {
+  //let sq2/3.display === false?
+  let displayTwo = document.querySelector(".squaretwo")
+  let displayThree = document.querySelector(".squarethree")
+  displayTwo.style.display = 'inline'
+  displayThree.style.display = 'inline'
+
+}
