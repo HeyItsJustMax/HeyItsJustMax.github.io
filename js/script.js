@@ -22,7 +22,8 @@ const $specialAttack = $("#spclatk")
 const $specialDefense = $("#spcldfs")
 const $speed = $("#speed")
 const $moves = $("#moves")
-const $sprites = $("#sprites")
+const $spritesFront = $("#spritesfront")
+const $spritesShiny = $("#spritesshiny")
 const $imgsrc = $('img[src=""]')
 const $input = $('input[type="text"]')
 
@@ -75,8 +76,9 @@ function render(pokeData) {
     $specialDefense.text(pokeData.stats[4].base_stat)
     $speed.text(pokeData.stats[5].base_stat)
 
-    // $sprites.attr(pokeData.sprites.front_default)
+    $spritesFront.attr("src", pokeData.sprites.front_default)
+    $spritesShiny.attr("src", pokeData.sprites.front_shiny)
   
-    $("sprites").attr($imgsrc, pokeData.sprites.front_default)
+   //trying to get img src="" to equal 
 }
 
