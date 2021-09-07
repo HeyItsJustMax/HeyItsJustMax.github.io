@@ -7,6 +7,7 @@ A simple Kanto Pokedex, returning stats and picture of searched pokemon
   * CSS
   * JavaScript
   * JQuery
+  * AJAX
   * Pokemon API
  
  # Screenshot:
