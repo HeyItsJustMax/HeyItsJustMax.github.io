@@ -18,6 +18,7 @@ A simple Kanto Pokedex, returning stats and picture of searched pokemon
  https://kanto-pokedex-ringo.netlify.app/
  
  # Future Enhancements:
-   * styling
+   * styling - font, search bar, etc
    * include sub-sections for each region
+   * effectiveness chart
 
